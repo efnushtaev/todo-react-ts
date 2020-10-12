@@ -9,7 +9,6 @@ export const TodoPage: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([])
   
   useEffect(() => {
-    debugger
     const saved = JSON.parse(localStorage.getItem('todos') || '[]') as ITodo[]
     setTodos(saved)
   }, [])
